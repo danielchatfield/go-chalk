@@ -2,6 +2,11 @@ package chalk
 
 import "fmt"
 
+// Format on windows is simply a wrapper around fmt.Sprintf
+func Format(param Attribute, format string, a ...interface{}) string {
+	return fmt.Sprintf(format, a...)
+}
+
 // Black on windows is simply a wrapper around fmt.Sprintf
 func Black(format string, a ...interface{}) string {
 	return fmt.Sprintf(format, a...)

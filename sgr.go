@@ -1,42 +1,37 @@
 package chalk
 
 // Escape is the terminal escape literal
-const Escape = "\x1b"
+const ESC = "\x1b"
 
 // SGR parameters as specified here: http://en.wikipedia.org/wiki/ANSI_escape_code
 const (
-	Reset Attribute = iota
-	Bold
-	Faint         // Not widely supported
-	Italic        // Not widely supported
-	Underline     //
-	BlinkSlow     // Less than 150 per min
-	BlinkRapid    // 150+ per minute
-	Negative      // Swap foreground and background
-	Conceal       // Not widely supported
-	StrikeThrough // Not widely supported
+	RESET Attribute = iota
+	BOLD
+	FAINT         // Not widely supported
+	ITALIC        // Not widely supported
+	UNDERLINE     //
+	BLINKSLOW     // Less than 150 per min
+	BLINKRAPID    // 150+ per minute
+	NEGATIVE      // Swap foreground and background
+	CONCEAL       // Not widely supported
+	STRIKETHROUGH // Not widely supported
 )
 
-// Foreground colors
+// Foreground, background, and intense offset
 const (
-	FGBlack Attribute = iota + 30
-	FGRed
-	FGGreen
-	FGYellow
-	FGBlue
-	FGMagenta
-	FGCyan
-	FGWhite
+	FOREGROUND Attribute = 30
+	BACKGROUND Attribute = 40
+	INTENSE    Attribute = 60
 )
 
-// Background colors
+// Colors
 const (
-	BGBlack Attribute = iota + 30
-	BGRed
-	BGGreen
-	BGYellow
-	BGBlue
-	BGMagenta
-	BGCyan
-	BGWhite
+	BLACK Attribute = iota
+	RED
+	GREEN
+	YELLOW
+	BLUE
+	MAGENTA
+	CYAN
+	WHITE
 )

@@ -31,12 +31,12 @@ func (f *Formatter) Add(value ...Attribute) *Formatter {
 
 func (f *Formatter) format(format string, a ...interface{}) string {
 	return fmt.Sprintf(
-		"%s[%sm%s%s[%dm]",
-		Escape,
+		"%s[%sm%s%s[%dm",
+		ESC,
 		f.sequence(),
 		fmt.Sprintf(format, a...),
-		Escape,
-		Reset,
+		ESC,
+		RESET,
 	)
 }
 
