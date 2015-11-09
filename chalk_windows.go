@@ -14,7 +14,7 @@ func Black(format string, a ...interface{}) string {
 
 // Red on windows is simply a wrapper around fmt.Sprintf
 func Red(format string, a ...interface{}) string {
-	returfmt.Sprintf(format, a...)
+	return fmt.Sprintf(format, a...)
 }
 
 // Green on windows is simply a wrapper around fmt.Sprintf
